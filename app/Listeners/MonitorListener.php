@@ -27,6 +27,6 @@ class MonitorListener
      */
     public function handle(Registered $event)
     {
-        dump('monitor listener executed');
+        // dump('monitor listener executed');
     }
 }
