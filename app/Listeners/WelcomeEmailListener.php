@@ -3,6 +3,7 @@
 namespace App\Listeners;
 
 use App\Events\NewRegisteredUserEvent;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
@@ -21,10 +22,10 @@ class WelcomeEmailListener
     /**
      * Handle the event.
      *
-     * @param  NewRegisteredUserEvent  $event
+     * @param  Registered  $event
      * @return void
      */
-    public function handle(NewRegisteredUserEvent $event)
+    public function handle(Registered $event)
     {
         dump('Listened NewRegisteredUserEvent');
     }
