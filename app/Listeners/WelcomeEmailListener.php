@@ -33,6 +33,6 @@ class WelcomeEmailListener
         //dump('Listened NewRegisteredUserEvent');
 
         //Enviar email
-        Mail::to('davidmgilo@gmail.com')->send(new WelcomeEmailMarkdown());
+        Mail::to($event->user->email)->send(new WelcomeEmailMarkdown($event->user));
     }
 }
