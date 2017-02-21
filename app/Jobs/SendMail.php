@@ -31,5 +31,6 @@ class SendMail implements ShouldQueue
     {
         sleep(10);
         dump('Enviant email');
+        event(new EmailSent());
     }
 }
