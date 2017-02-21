@@ -29,6 +29,7 @@ class SendMail implements ShouldQueue
      */
     public function handle()
     {
-        //
+        sleep(10);
+        dump('Enviant email');
     }
 }
